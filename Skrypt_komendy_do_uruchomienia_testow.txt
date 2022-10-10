@@ -1,0 +1,15 @@
+gmsaas auth login k.garus.92@gmail.com
+gmsaas auth whoami
+instancjaTest=$(gmsaas instances start b9cf7b2c-4d11-4777-97c7-29d3b5c68d59 S8Android8_Krzys)
+port1=30000
+gmsaas instances adbconnect $instancjaTest --adb-serial-port=$port1
+adb devices
+adb install /home/tester/PycharmProjects/projekt_appium/ApiDemos-debug.apk
+~/Android/Sdk/tools/bin -->> odpalamy ./uiautomatorviewer  //wjescie do odpowiedniej scie¿ki i odpalanie programu
+odpalenie appium z pulpitu
+teraz mo¿na odpalaæ skrypty w pycharm
+zamkniêcie urz¹dzen wirtualnych -->> ? zamknijUrzadzenie=$(gmsaas instances list -q | xargs -n1 gmsaas instances stop --no-wait)
+
+
+
+
